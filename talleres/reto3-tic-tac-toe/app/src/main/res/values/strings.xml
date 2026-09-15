@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android Tic-Tac-Toe</string>
+
+    <string name="first_human">Tú empiezas.</string>
+    <string name="turn_human">Tu turno.</string>
+    <string name="turn_computer">Turno de Android.</string>
+    <string name="result_tie">¡Empate!</string>
+    <string name="result_human_wins">¡Ganaste!</string>
+    <string name="result_computer_wins">¡Ganó Android!</string>
+
+    <string name="menu_new_game">New Game</string>
 </resources>
