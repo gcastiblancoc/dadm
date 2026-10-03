@@ -28,4 +28,6 @@
     <string name="quit_question">Are you sure you want to quit?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <string name="reset_scores">Reset scoreboard</string>
 </resources>

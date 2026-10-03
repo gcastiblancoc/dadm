@@ -38,6 +38,13 @@ public class TicTacToeGame {
      * Coloca al jugador dado en la posición indicada.
      * Si la posición no está libre, no hace nada.
      */
+    public char[] getBoardState() {
+        return mBoard.clone();
+    }
+
+    public void setBoardState(char[] board) {
+        mBoard = board.clone();
+    }
     public boolean setMove(char player, int location) {
         if (location >= 0 && location < BOARD_SIZE && mBoard[location] == OPEN_SPOT) {
             mBoard[location] = player;

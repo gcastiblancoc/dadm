@@ -15,10 +15,9 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/quit"
-        android:title="Quit"
-        android:icon="@drawable/quit_game"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/reset_scores"
+        android:title="@string/reset_scores"
+        android:icon="@android:drawable/ic_menu_revert" />
 
     <item
         android:id="@+id/about"

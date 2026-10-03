@@ -1,5 +1,6 @@
 package co.edu.unal.tictactoe;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -48,6 +49,8 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
     // Reproductores de los efectos de sonido
     private MediaPlayer mHumanMediaPlayer;
     private MediaPlayer mComputerMediaPlayer;
+    // Preferencias persistentes (marcador)
+    private SharedPreferences mPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,34 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
         // Escuchar toques sobre el tablero
         mBoardView.setOnTouchListener(mTouchListener);
 
-        startNewGame();
+        // Restaurar el marcador guardado (0 si es la primera vez)
+        mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
+        mHumanWins = mPrefs.getInt("mHumanWins", 0);
+        mComputerWins = mPrefs.getInt("mComputerWins", 0);
+        mTies = mPrefs.getInt("mTies", 0);
+        // Restaurar la dificultad (Expert si nunca se ha guardado)
+        int difficulty = mPrefs.getInt("mDifficulty",
+                TicTacToeGame.DifficultyLevel.Expert.ordinal());
+        TicTacToeGame.DifficultyLevel[] levels = TicTacToeGame.DifficultyLevel.values();
+        if (difficulty >= 0 && difficulty < levels.length) {
+            mGame.setDifficultyLevel(levels[difficulty]);
+        }
+
+        if (savedInstanceState == null) {
+            startNewGame();
+        } else {
+            // Restaurar la partida tras rotar
+            mGame.setBoardState(savedInstanceState.getCharArray("board"));
+            mGameOver = savedInstanceState.getBoolean("mGameOver");
+            mInfoTextView.setText(savedInstanceState.getCharSequence("info"));
+            mHumanGoesFirst = savedInstanceState.getBoolean("mHumanGoesFirst");
+
+            // Si se rotó mientras el computador "pensaba", retomar su jugada
+            if (savedInstanceState.getBoolean("mComputerThinking")) {
+                scheduleComputerMove();
+            }
+        }
+        updateScores();
     }
 
     @Override
@@ -92,9 +122,33 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+
+        // Guardar el marcador actual
+        SharedPreferences.Editor ed = mPrefs.edit();
+        ed.putInt("mHumanWins", mHumanWins);
+        ed.putInt("mComputerWins", mComputerWins);
+        ed.putInt("mTies", mTies);
+        ed.putInt("mDifficulty", mGame.getDifficultyLevel().ordinal());
+        ed.apply();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         mHandler.removeCallbacksAndMessages(null);  // cancelar jugadas pendientes
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putCharArray("board", mGame.getBoardState());
+        outState.putBoolean("mGameOver", mGameOver);
+        outState.putCharSequence("info", mInfoTextView.getText());
+        outState.putBoolean("mHumanGoesFirst", mHumanGoesFirst);
+        outState.putBoolean("mComputerThinking", mComputerThinking);
     }
 
     // Prepara el tablero para una nueva partida
@@ -198,8 +252,11 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
         } else if (id == R.id.ai_difficulty) {
             showDifficultyDialog();
             return true;
-        } else if (id == R.id.quit) {
-            showQuitDialog();
+        } else if (id == R.id.reset_scores) {
+            mHumanWins = 0;
+            mComputerWins = 0;
+            mTies = 0;
+            updateScores();
             return true;
         } else if (id == R.id.about) {
             showAboutDialog();
@@ -235,16 +292,6 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
                     mGame.setDifficultyLevel(TicTacToeGame.DifficultyLevel.values()[item]);
                     Toast.makeText(getApplicationContext(), levels[item], Toast.LENGTH_SHORT).show();
                 })
-                .create()
-                .show();
-    }
-
-    private void showQuitDialog() {
-        new AlertDialog.Builder(this)
-                .setMessage(R.string.quit_question)
-                .setCancelable(false)
-                .setPositiveButton(R.string.yes, (dialog, id) -> AndroidTicTacToeActivity.this.finish())
-                .setNegativeButton(R.string.no, null)
                 .create()
                 .show();
     }
