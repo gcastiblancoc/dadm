@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Tic-Tac-Toe</string>
+
+    <string name="about">About</string>
+    <string name="about_title">Tic-Tac-Toe</string>
+    <string name="about_author">By Gabriel Castiblanco</string>
+    <string name="about_description">Choose from one of three difficulty levels. Don\'t let the Android beat you!</string>
+
+    <string name="score_human">Human: %1$d</string>
+    <string name="score_ties">Ties: %1$d</string>
+    <string name="score_computer">Android: %1$d</string>
+
+    <string name="first_human">You go first.</string>
+    <string name="first_computer">Android went first. Your turn.</string>
+    <string name="turn_human">Your turn.</string>
+    <string name="turn_computer">It\'s Android\'s turn.</string>
+    <string name="result_tie">It\'s a tie!</string>
+    <string name="result_human_wins">You won!</string>
+    <string name="result_computer_wins">Android won!</string>
+
+    <string name="menu_new_game">New Game</string>
+
+    <string name="difficulty_choose">Choose a difficulty level:</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_harder">Harder</string>
+    <string name="difficulty_expert">Expert</string>
+    <string name="quit_question">Are you sure you want to quit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="reset_scores">Reset scoreboard</string>
+
+    <string name="lobby_title">Triqui Online</string>
+    <string name="lobby_connecting">Conectando…</string>
+    <string name="lobby_connected">Conectado</string>
+    <string name="lobby_error">No se pudo conectar: %1$s</string>
+    <string name="create_game">Crear juego</string>
+    <string name="play_vs_computer">Jugar contra Android</string>
+    <string name="available_games">Juegos disponibles</string>
+    <string name="no_games">No hay juegos disponibles. ¡Crea uno!</string>
+    <string name="game_created">Juego creado. Esperando a un rival…</string>
+    <string name="your_game">(tu juego)</string>
+
+    <string name="you_are">Juegas con %1$s</string>
+    <string name="waiting_rival">Esperando a un rival…</string>
+    <string name="playing_against">Rival: %1$s</string>
+    <string name="game_unavailable">Ese juego ya no está disponible</string>
+    <string name="game_deleted">El juego ya no existe</string>
+
+    <string name="your_turn">Tu turno</string>
+    <string name="rival_turn">Turno de %1$s</string>
+    <string name="not_your_turn">Espera tu turno</string>
+    <string name="result_you_win">¡Ganaste!</string>
+    <string name="result_you_lose">Perdiste</string>
+
+    <string name="online_score">Tú %1$d · Empates %2$d · Rival %3$d</string>
+    <string name="new_round">Nueva partida</string>
+    <string name="back_to_lobby">Volver al lobby</string>
+    <string name="rival_left">Tu rival abandonó la partida. ¡Ganaste!</string>
+    <string name="rival_exited">Tu rival salió del juego</string>
+</resources>
