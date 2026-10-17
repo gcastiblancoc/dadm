@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Directorio Empresas</string>
+    <string name="no_empresas_registradas">No hay empresas registradas</string>
+    <string name="sin_resultados_filtros">Ninguna empresa coincide con los filtros</string>
+    <string name="agregar_empresa">Agregar empresa</string>
+    <string name="buscar_por_nombre">Buscar por nombre</string>
+
+    <!-- Formulario Empresa -->
+    <string name="nueva_empresa">Nueva empresa</string>
+    <string name="editar_empresa">Editar empresa</string>
+    <string name="empresa_no_encontrada">Empresa no encontrada</string>
+
+    <string name="label_nombre">Nombre *</string>
+    <string name="label_url">Sitio Web (URL)</string>
+    <string name="label_telefono">Teléfono</string>
+    <string name="label_email">Correo electrónico</string>
+    <string name="label_productos_servicios">Productos y Servicios</string>
+    <string name="label_clasificacion">Clasificación *</string>
+
+    <string name="cb_consultoria">Consultoría</string>
+    <string name="cb_desarrollo_medida">Desarrollo a la medida</string>
+    <string name="cb_fabrica_software">Fábrica de software</string>
+
+    <string name="btn_guardar">Guardar</string>
+
+    <!-- Diálogo de Eliminación -->
+    <string name="eliminar_empresa_titulo">Eliminar empresa</string>
+    <string name="eliminar_empresa_mensaje">¿Seguro que deseas eliminar «%1$s»? Esta acción no se puede deshacer.</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <!-- Mensajes de Error y Toast -->
+    <string name="error_nombre_obligatorio">El nombre es obligatorio</string>
+    <string name="error_email_invalido">Email no válido</string>
+    <string name="error_url_invalida">URL no válida</string>
+    <string name="error_clasificacion_requerida">Selecciona al menos una clasificación</string>
+    <string name="error_eliminar_empresa">No se pudo eliminar la empresa</string>
+
+    <string name="msg_empresa_creada">Empresa creada</string>
+    <string name="msg_empresa_actualizada">Empresa actualizada</string>
+    <string name="msg_empresa_eliminada">Empresa eliminada</string>
+
+    <!-- Plurals para conteo de resultados -->
+    <plurals name="empresas_encontradas_count">
+        <item quantity="one">%1$d empresa</item>
+        <item quantity="other">%1$d empresas</item>
+    </plurals>
 </resources>
