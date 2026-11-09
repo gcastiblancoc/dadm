@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deben estar en el mismo orden que Categoria.kt -->
+    <string-array name="categorias_nombres">
+        <item>@string/cat_hospitales</item>
+        <item>@string/cat_turismo</item>
+        <item>@string/cat_farmacias</item>
+        <item>@string/cat_restaurantes</item>
+        <item>@string/cat_policia</item>
+        <item>@string/cat_parques</item>
+        <item>@string/cat_educacion</item>
+    </string-array>
+
+    <string-array name="categorias_valores">
+        <item>hospitales</item>
+        <item>turismo</item>
+        <item>farmacias</item>
+        <item>restaurantes</item>
+        <item>policia</item>
+        <item>parques</item>
+        <item>educacion</item>
+    </string-array>
+
+    <string-array name="categorias_por_defecto">
+        <item>hospitales</item>
+        <item>turismo</item>
+        <item>farmacias</item>
+    </string-array>
+</resources>

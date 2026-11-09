@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/pref_categoria_busqueda">
+
+        <SeekBarPreference
+            app:key="radio_km"
+            app:title="@string/pref_radio_titulo"
+            app:summary="@string/pref_radio_resumen"
+            app:defaultValue="2"
+            app:min="1"
+            android:max="10"
+            app:showSeekBarValue="true"
+            app:updatesContinuously="false" />
+
+        <MultiSelectListPreference
+            app:key="categorias"
+            app:title="@string/pref_categorias_titulo"
+            app:entries="@array/categorias_nombres"
+            app:entryValues="@array/categorias_valores"
+            app:defaultValue="@array/categorias_por_defecto" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/pref_categoria_acerca">
+
+        <Preference
+            app:key="datos"
+            app:title="@string/pref_datos_titulo"
+            app:summary="@string/pref_datos_resumen"
+            app:selectable="false" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
