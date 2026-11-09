@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores de cada categoría en el mapa -->
+    <color name="cat_hospitales">#FFD32F2F</color>
+    <color name="cat_turismo">#FF7B1FA2</color>
+    <color name="cat_farmacias">#FF2E7D32</color>
+    <color name="cat_restaurantes">#FFEF6C00</color>
+    <color name="cat_policia">#FF1565C0</color>
+    <color name="cat_parques">#FF558B2F</color>
+    <color name="cat_educacion">#FF00838F</color>
+
+    <color name="radio_borde">#CC1E88E5</color>
+    <color name="radio_relleno">#221E88E5</color>
+</resources>

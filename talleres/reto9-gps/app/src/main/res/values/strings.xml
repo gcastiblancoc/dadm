@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Puntos de Interés</string>
+
+    <!-- Pantalla principal -->
+    <string name="configuracion">Configuración</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="centrar_en_mi">Centrar en mi ubicación</string>
+    <string name="buscando_ubicacion">Buscando tu ubicación…</string>
+    <string name="buscando_puntos">Buscando puntos de interés…</string>
+    <string name="tu_ubicacion">Tu ubicación</string>
+    <string name="coordenadas">Lat %1$.5f, Lon %2$.5f</string>
+    <string name="resumen_resultados">%1$s en un radio de %2$d km</string>
+    <string name="sin_categorias">Selecciona al menos una categoría en Configuración</string>
+
+    <plurals name="puntos_encontrados">
+        <item quantity="one">%1$d punto de interés</item>
+        <item quantity="other">%1$d puntos de interés</item>
+    </plurals>
+
+    <!-- Permisos y errores -->
+    <string name="permiso_titulo">Permiso de ubicación</string>
+    <string name="permiso_explicacion">La app necesita tu ubicación para mostrar los puntos de interés cercanos. Puedes concederlo desde los ajustes del sistema.</string>
+    <string name="abrir_ajustes">Abrir ajustes</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="error_ubicacion">No se pudo obtener tu ubicación. Revisa que el GPS esté activado.</string>
+    <string name="error_puntos">No se pudieron cargar los puntos de interés. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="reintentar">Reintentar</string>
+
+    <!-- Preferencias -->
+    <string name="pref_categoria_busqueda">Búsqueda</string>
+    <string name="pref_radio_titulo">Radio de búsqueda (km)</string>
+    <string name="pref_radio_resumen">Distancia máxima desde tu ubicación</string>
+    <string name="pref_categorias_titulo">Tipos de puntos de interés</string>
+    <string name="pref_categorias_ninguna">Ninguno seleccionado</string>
+    <string name="pref_categoria_acerca">Acerca de</string>
+    <string name="pref_datos_titulo">Datos del mapa</string>
+    <string name="pref_datos_resumen">© Colaboradores de OpenStreetMap. Puntos obtenidos con la Overpass API.</string>
+
+    <!-- Categorías -->
+    <string name="cat_hospitales">Hospitales y clínicas</string>
+    <string name="cat_turismo">Lugares turísticos</string>
+    <string name="cat_farmacias">Farmacias</string>
+    <string name="cat_restaurantes">Restaurantes y cafés</string>
+    <string name="cat_policia">Estaciones de policía</string>
+    <string name="cat_parques">Parques</string>
+    <string name="cat_educacion">Universidades y colegios</string>
+</resources>
