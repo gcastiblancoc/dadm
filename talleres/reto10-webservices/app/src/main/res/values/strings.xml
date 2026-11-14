@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Municipios de Colombia</string>
+
+    <!-- Parámetros de la consulta -->
+    <string name="titulo_parametros">Parámetros de la consulta</string>
+    <string name="hint_nombre">Nombre del municipio (opcional)</string>
+    <string name="hint_departamento">Departamento</string>
+    <string name="todos_los_departamentos">Todos los departamentos</string>
+    <string name="cargando_departamentos">Cargando departamentos…</string>
+    <string name="label_tipo">Tipo</string>
+    <string name="tipo_todos">Todos</string>
+    <string name="tipo_municipio">Municipio</string>
+    <string name="tipo_isla">Isla</string>
+    <string name="tipo_area_no_municipalizada">Área no municipalizada</string>
+    <string name="label_orden">Ordenar por</string>
+    <string name="orden_nombre">Nombre</string>
+    <string name="orden_codigo">Código DIVIPOLA</string>
+    <string name="btn_consultar">Consultar</string>
+
+    <!-- Resultados -->
+    <string name="titulo_consulta_enviada">Petición enviada al servicio</string>
+    <string name="instrucciones">Elige los parámetros y pulsa «Consultar» para llamar al servicio web de datos.gov.co.</string>
+    <string name="consultando">Consultando datos.gov.co…</string>
+    <string name="sin_resultados">El servicio no devolvió municipios con esos parámetros.</string>
+    <string name="error_consulta">No se pudo consultar el servicio: %1$s</string>
+    <string name="error_consulta_corto">Falló la consulta al servicio web</string>
+    <string name="error_departamentos">No se pudo cargar la lista de departamentos; se reintentará al consultar.</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="item_detalle">%1$s · DIVIPOLA %2$s</string>
+    <string name="item_coordenadas">Lat %1$.4f, Lon %2$.4f</string>
+    <string name="sin_coordenadas">Sin coordenadas</string>
+    <string name="sin_app_mapas">No hay una app de mapas instalada</string>
+    <string name="fuente_datos">Fuente: DANE · DIVIPOLA (datos.gov.co, gdxc-w37w)</string>
+
+    <plurals name="resultados_count">
+        <item quantity="one">%1$d municipio encontrado</item>
+        <item quantity="many">%1$d municipios encontrados</item>
+        <item quantity="other">%1$d municipios encontrados</item>
+    </plurals>
+</resources>
