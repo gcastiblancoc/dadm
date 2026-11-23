@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Asistente IA</string>
+
+    <!-- Chat -->
+    <string name="hint_mensaje">Escribe un mensaje…</string>
+    <string name="enviar">Enviar</string>
+    <string name="escribiendo">Gemini está escribiendo…</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="copiado">Mensaje copiado</string>
+    <string name="vacio_saludo">Hola, soy tu %1$s</string>
+    <string name="vacio_sugerencias">Prueba con una de estas ideas o escribe tu propio mensaje:</string>
+    <string name="powered_by">Respuestas generadas con Gemini (Google) · %1$s</string>
+
+    <!-- Menú -->
+    <string name="menu_nuevo_chat">Nuevo chat</string>
+    <string name="menu_personalidad">Cambiar personalidad</string>
+    <string name="menu_ajustes">Ajustes</string>
+
+    <!-- Personalidad -->
+    <string name="titulo_personalidad">Elige una personalidad</string>
+    <string name="aviso_personalidad">Al cambiar de personalidad se inicia un chat nuevo.</string>
+
+    <!-- Ajustes -->
+    <string name="titulo_ajustes">Ajustes de Gemini</string>
+    <string name="hint_api_key">API key de Gemini</string>
+    <string name="ayuda_api_key">Consíguela gratis en https://aistudio.google.com/apikey</string>
+    <string name="ayuda_api_key_compilacion">Si la dejas vacía se usa la clave de local.properties.</string>
+    <string name="hint_modelo">Modelo</string>
+    <string name="cargar_modelos">Cargar modelos de mi clave</string>
+    <string name="cargando_modelos">Consultando modelos disponibles…</string>
+    <string name="modelos_cargados">%1$d modelos disponibles. Toca el campo «Modelo» para elegir.</string>
+    <string name="falta_clave_para_modelos">Escribe primero la API key.</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="ajustes_guardados">Ajustes guardados</string>
+    <string name="falta_api_key">Primero configura tu API key de Gemini</string>
+</resources>
